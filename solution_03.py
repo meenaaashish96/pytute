@@ -1,4 +1,9 @@
+#as per the score calculate grade
 score = int(input("Enter your score:"))
+
+if(score>100):
+    raise "Wrong grading !";
+
 
 if(score < 60):
     grade = "F";
@@ -8,8 +13,6 @@ elif(score>=70 and score<80):
     grade = "C";
 elif(score>=80 and score<90):
     grade = "B";
-elif(score>100):
-    raise "Wrong grading !";
 else:
     grade = "A";
 
