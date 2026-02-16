@@ -107,5 +107,17 @@ function create_table_schema_on_activation(){
 }
 $wpdb->insert();
 $wpdb->get_results();
+add_action('rest_api_init', 'rest_api_init');
+function rest_api_init(){
+    register_rest_route('library/v1', '/books', [
+        'method' => 'GET',
+        'callback' => 'library_get_books',
+        'permission_callback' => function(){
+            return current_user_can('edit_post');
+        }
+    ]);
+        }
+    ]);
+}
 
 ?>
