@@ -2,8 +2,8 @@
 fruite = "banana";
 color = "brown";
 
-if color != 'green' and color != 'yellow' and color != 'brown' :
-    raise "Invalid Color";
+if color != 'green' and color != 'yellow' and color != 'brown' and fruite != 'banana' :
+    raise "Invalid value";
 
 if color == 'green':
     status = 'Unripe';
